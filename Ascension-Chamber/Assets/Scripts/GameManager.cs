@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour
         board = FindObjectOfType<Board>(); // Will replace this at some point.
     }
 
+    public void Start()
+    {
+        SetupLevel();
+    }
+
     public void SetupLevel()
     {
         setupEvent?.Invoke();

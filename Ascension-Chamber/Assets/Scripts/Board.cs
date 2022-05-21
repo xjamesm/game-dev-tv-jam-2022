@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,13 +14,42 @@ public class Board : MonoBehaviour
         new Vector2(0f,-spacing),
     };
 
-    [SerializeField] List<Node> allNodes = new List<Node>();
+    List<Node> allNodes = new List<Node>();
     private Node playerNode;
     private Node goalNode;
 
     public List<Node> AllNodes { get => allNodes; }
     public Node PlayerNode { get => playerNode; }
     public Node GoalNode { get => goalNode; }
+
+    private void Awake()
+    {
+        GetAllNodes();
+    }
+
+    public void InitBoard()
+    {
+        playerNode = allNodes[0];
+
+        if(playerNode != null)
+        {
+            playerNode.InitNode(this);
+        }
+    }
+
+    private void GetAllNodes()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.TryGetComponent<Node>(out Node node))
+            {
+                if(!allNodes.Contains(node))
+                {
+                    allNodes.Add(node);
+                }
+            }
+        }
+    }
 
     public Node FindNodeAt(Vector3 pos)
     {

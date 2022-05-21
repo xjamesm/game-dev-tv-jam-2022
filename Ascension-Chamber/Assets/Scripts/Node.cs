@@ -9,7 +9,7 @@ public class Node : MonoBehaviour
     public LayerMask obstacleLayer;
 
     private Vector2 position;
-    public Vector2 Position { get => position; }
+    public Vector2 Position { get => (Vector2)Vector2Int.RoundToInt(position); }
     
     private List<Node> neighbourNodes = new List<Node>();
     public List<Node> NeighbourNodes { get => neighbourNodes; }
@@ -21,6 +21,11 @@ public class Node : MonoBehaviour
     private bool isInitialised = false;
 
     public bool isLevelGoal = false;
+
+    private void Awake()
+    {
+        position = new Vector2(transform.position.x, transform.position.z);
+    }
 
     public void InitNode(Board _board)
     {
