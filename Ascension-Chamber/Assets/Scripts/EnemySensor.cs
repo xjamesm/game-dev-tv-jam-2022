@@ -50,6 +50,6 @@ public class EnemySensor : MonoBehaviour
     {
         Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
 
-        Gizmos.DrawCube(transform.position + dirToSearch, Vector3.one * 0.6f);
+        Gizmos.DrawCube(transform.position + transform.TransformVector(dirToSearch), Vector3.one * 0.6f);
     }
 }

@@ -87,11 +87,13 @@ public class GameManager : MonoBehaviour
 
         if (SavedCorpse)
         {
+            Debug.Log("Game Win!");
             currentState = GameState.GameWin;
             winLevelEvent?.Invoke();
         }
         else
         {
+            Debug.Log("Game Loose!");
             currentState = GameState.GameOver;
             loseLevelEvent?.Invoke();
         }
