@@ -53,6 +53,7 @@ public class Mover : MonoBehaviour
                 return true;
             }
         }
+        Debug.Log("Can't move to: " + targetNode + "Current node is: " + currentNode);
         return false;
     }
 
@@ -61,7 +62,7 @@ public class Mover : MonoBehaviour
         isMoving = true;
         destination = destinationPos;
 
-        if(faceDestination)
+        if (faceDestination)
         {
             yield return FaceDestination();
         }
@@ -79,6 +80,7 @@ public class Mover : MonoBehaviour
         transform.position = destinationPos;
 
         UpdateCurrentNode();
+
         onFinishMovementEvent?.Invoke();
     }
 
@@ -117,6 +119,9 @@ public class Mover : MonoBehaviour
     protected IEnumerator FaceDestination()
     {
         Vector3 relPos = destination - transform.position;
+        if(relPos == Vector3.zero)
+            yield break;
+
         Quaternion newRot = Quaternion.LookRotation(relPos, Vector3.up);
 
         float startY = transform.eulerAngles.y;

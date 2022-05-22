@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     {
         board = FindObjectOfType<Board>();
         player = FindObjectOfType<PlayerManager>();
+        var aEnemies = FindObjectsOfType<EnemyManager>() as EnemyManager[];
+        enemies = new List<EnemyManager>(aEnemies);
     }
 
     public void Start()

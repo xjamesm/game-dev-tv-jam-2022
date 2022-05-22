@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1317,11 +1317,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
   isLevelGoal: 0
+--- !u!1 &220675318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220675319}
+  - component: {fileID: 220675322}
+  - component: {fileID: 220675321}
+  - component: {fileID: 220675320}
+  m_Layer: 3
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &220675319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220675318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.417, z: 0.2}
+  m_LocalScale: {x: 0.6, y: 0.2, z: 0.8}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1383854571}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &220675320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220675318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &220675321
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220675318}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1d411b2c000f82e4f88990dc20204253, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &220675322
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220675318}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &241754335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1482,7 +1579,7 @@ GameObject:
   - component: {fileID: 285666470}
   - component: {fileID: 285666469}
   - component: {fileID: 285666468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1912,6 +2009,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339678472}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &346520508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346520510}
+  - component: {fileID: 346520509}
+  - component: {fileID: 346520511}
+  - component: {fileID: 346520512}
+  m_Layer: 6
+  m_Name: Enemy Patrol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &346520509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346520508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b1bb2bb5b4c714b97df4bfcc1bae95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDead: 0
+--- !u!4 &346520510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346520508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 859609608}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &346520511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346520508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6097ccc973c40e348acb17497a6730ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {x: 0, y: 0, z: 0}
+  isMoving: 0
+  faceDestination: 0
+  moveSpeed: 1.5
+  delay: 0
+  rotateSpeed: 360
+  onFinishMovementEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 346520509}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: FinishTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dirToMove: {x: 0, y: 0, z: 1}
+--- !u!114 &346520512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346520508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c48262f76cd7e841a9bbde96dcab67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirToSearch: {x: 0, y: 0, z: 1}
 --- !u!1 &359814009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +2149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2234,7 +2426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2317,10 +2509,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {x: 0, y: 0, z: 0}
   isMoving: 0
-  faceDestination: 0
+  faceDestination: 1
   moveSpeed: 3
   delay: 0
-  rotateSpeed: 0.5
+  rotateSpeed: 360
   onFinishMovementEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2397,7 +2589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2677,7 +2869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2727,7 +2919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -2985,7 +3177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3035,7 +3227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3085,7 +3277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3326,7 +3518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3584,7 +3776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -4086,7 +4278,7 @@ GameObject:
   - component: {fileID: 750197493}
   - component: {fileID: 750197494}
   - component: {fileID: 750197495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corpse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4621,7 +4813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -4769,11 +4961,110 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
   isLevelGoal: 0
+--- !u!1 &859609607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859609608}
+  - component: {fileID: 859609611}
+  - component: {fileID: 859609610}
+  - component: {fileID: 859609609}
+  m_Layer: 6
+  m_Name: Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &859609608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859609607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1115344741}
+  m_Father: {fileID: 346520510}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &859609609
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859609607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &859609610
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859609607}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2d8d28be372344346a61f1cc46b4c92e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &859609611
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859609607}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &885472322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,7 +5306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -5553,7 +5844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -5713,7 +6004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -5971,7 +6262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -6196,6 +6487,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100501003}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1115344740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115344741}
+  - component: {fileID: 1115344744}
+  - component: {fileID: 1115344743}
+  - component: {fileID: 1115344742}
+  m_Layer: 6
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1115344741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115344740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.417, z: 0.2}
+  m_LocalScale: {x: 0.6, y: 0.2, z: 0.8}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 859609608}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1115344742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115344740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1115344743
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115344740}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1d411b2c000f82e4f88990dc20204253, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1115344744
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115344740}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1140928894
 GameObject:
   m_ObjectHideFlags: 0
@@ -6339,7 +6727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -6585,7 +6973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -7125,7 +7513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -7285,7 +7673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -7641,7 +8029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -7740,7 +8128,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 220675319}
   m_Father: {fileID: 404129415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8083,7 +8472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -8133,7 +8522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -8685,7 +9074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -8931,7 +9320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -9483,7 +9872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -9729,7 +10118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -10073,7 +10462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -11139,7 +11528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -11495,7 +11884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -12105,7 +12494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -12363,7 +12752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -12511,7 +12900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007273fe00c14940ac6abe27d070d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initDelay: 1
+  initDelay: 0
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
