@@ -14,7 +14,11 @@ public class Obstacle : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
-        Gizmos.DrawCube(transform.position, Vector3.one);
+        //Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
+
+        //if (boxCollider == null)
+        //    boxCollider = GetComponent<BoxCollider>();
+
+        //Gizmos.DrawCube(transform.position, boxCollider.size);
     }
 }

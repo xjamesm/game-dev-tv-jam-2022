@@ -26,8 +26,12 @@ public class GameManager : MonoBehaviour
     Turn currentTurn = Turn.Player;
     public Turn CurrentTurn { get => currentTurn; }
 
+    public int TurnCounter = 0;
+
     GameState currentState = GameState.Setup;
     public GameState CurrentState { get => currentState; }
+
+    public bool SavedCorpse;
 
     public UnityEvent setupEvent;
     public UnityEvent startLevelEvent;
@@ -37,10 +41,13 @@ public class GameManager : MonoBehaviour
     public UnityEvent loseLevelEvent;
 
     private Board board;
+    private PlayerManager player;
+    List<EnemyManager> enemies;
 
     private void Awake()
     {
-        board = FindObjectOfType<Board>(); // Will replace this at some point.
+        board = FindObjectOfType<Board>();
+        player = FindObjectOfType<PlayerManager>();
     }
 
     public void Start()
@@ -50,39 +57,113 @@ public class GameManager : MonoBehaviour
 
     public void SetupLevel()
     {
-        setupEvent?.Invoke();
+        player.SetInputActive(false);
         currentState = GameState.Setup;
+        setupEvent?.Invoke();
     }
 
     public void StartLevel()
     {
-        startLevelEvent?.Invoke();
+        TurnCounter = 0;
+        currentTurn = Turn.Player;
+
         currentState = GameState.StartLevel;
+        startLevelEvent?.Invoke();
     }
 
     public void PlayLevel()
     {
-        playLevelEvent?.Invoke();
+        player.SetInputActive(true);
         currentState = GameState.GamePlaying;
+        playLevelEvent?.Invoke();
     }
 
     public void EndLevel()
     {
         endLevelEvent?.Invoke();
-        
-        // Some logic here
-        // invoke win or loose.
+        player.SetInputActive(false);
+
+        if (SavedCorpse)
+        {
+            currentState = GameState.GameWin;
+            winLevelEvent?.Invoke();
+        }
+        else
+        {
+            currentState = GameState.GameOver;
+            loseLevelEvent?.Invoke();
+        }
     }
 
     public void UpdateTurn()
     {
         if(currentTurn == Turn.Player)
         {
-
+            TurnCounter++;
+            if (player.IsTurnComplete && !AreEnemiesAllDead())
+            {
+                PlayEnemyTurn();
+            }
         }
-        else
+        else if(currentTurn == Turn.Enemy)
         {
-
+            if(IsEnemyTurnComplete())
+            {
+                PlayPlayerTurn();
+            }
         }
+    }
+
+    private bool AreEnemiesAllDead()
+    {
+        if (enemies == null)
+            return true;
+
+        foreach (EnemyManager enemy in enemies)
+        {
+            if (!enemy.IsDead)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private void PlayEnemyTurn()
+    {
+        currentTurn = Turn.Enemy;
+
+        if (enemies == null)
+            return;
+
+        foreach (EnemyManager enemy in enemies)
+        {
+            if (enemy != null && !enemy.IsDead)
+            {
+                enemy.IsTurnComplete = false;
+                enemy.PlayTurn();
+            }
+        }
+    }
+
+    private bool IsEnemyTurnComplete()
+    {
+        if (enemies == null)
+            return true;
+
+        foreach (EnemyManager enemy in enemies)
+        {
+            if (enemy.IsDead) continue;
+            if (!enemy.IsTurnComplete) return false;
+        }
+
+        return true;
+    }
+
+    private void PlayPlayerTurn()
+    {
+        currentTurn = Turn.Player;
+        player.IsTurnComplete = false;
     }
 }

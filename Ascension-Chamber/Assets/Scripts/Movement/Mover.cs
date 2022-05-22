@@ -37,14 +37,23 @@ public class Mover : MonoBehaviour
         if (board == null)
             return;
 
-        Node targetNode = board.FindNodeAt(destinationPos);
-        if(targetNode != null && currentNode != null)
+        if(CanMoveToPosition(destinationPos))
         {
-            if(currentNode.LinkedNodes.Contains(targetNode))
+            StartCoroutine(MoveCo(destinationPos, delayTime));
+        }
+    }
+
+    public bool CanMoveToPosition(Vector3 destinationPos)
+    {
+        Node targetNode = board.FindNodeAt(destinationPos);
+        if (targetNode != null && currentNode != null)
+        {
+            if (currentNode.LinkedNodes.Contains(targetNode))
             {
-                StartCoroutine(MoveCo(destinationPos, delayTime));
+                return true;
             }
         }
+        return false;
     }
 
     protected virtual IEnumerator MoveCo(Vector3 destinationPos, float delayTime)
@@ -70,6 +79,7 @@ public class Mover : MonoBehaviour
         transform.position = destinationPos;
 
         UpdateCurrentNode();
+        onFinishMovementEvent?.Invoke();
     }
 
     public void MoveLeft()

@@ -5,12 +5,15 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
     protected GameManager gameManager;
-    private bool isTurnComplete = false;
-    protected bool IsTurnComplete { get => isTurnComplete; set => isTurnComplete = value; }
+    protected Board board;
+    
+    protected bool isTurnComplete = false;
+    public bool IsTurnComplete { get => isTurnComplete; set => isTurnComplete = value; }
 
     virtual protected void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        board = FindObjectOfType<Board>();
     }
 
     virtual public void FinishTurn()

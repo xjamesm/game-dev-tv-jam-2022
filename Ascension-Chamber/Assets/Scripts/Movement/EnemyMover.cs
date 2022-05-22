@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : TurnManager
+public class EnemyMover : Mover
 {
-    public bool IsDead;
-
-    public void PlayTurn()
+    virtual public void MoveOneTurn()
     {
 
     }

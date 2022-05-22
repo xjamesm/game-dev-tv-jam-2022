@@ -10,6 +10,7 @@ public class PlayerManager : TurnManager
     public PlayerInput input;
 
     public UnityEvent onDeathEvent;
+    public UnityEvent onWinEvent;
 
     protected override void Awake()
     {
@@ -44,8 +45,31 @@ public class PlayerManager : TurnManager
         }
     }
 
+    public void EndMovement()
+    {
+        board.UpdatePlayerNode();
+
+        if (board.PlayerNode.Position == board.GoalNode.Position)
+        {
+            if(gameManager.SavedCorpse)
+            {
+                onWinEvent?.Invoke();
+                return;
+            }
+        }
+
+        FinishTurn();
+    }
+
     public void Die()
     {
         onDeathEvent?.Invoke();
     }
+
+    public void SetInputActive(bool status)
+    {
+        input.inputEnabled = status;
+    }
+
+    
 }

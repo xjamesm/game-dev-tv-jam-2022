@@ -15,21 +15,34 @@ public class Board : MonoBehaviour
     };
 
     List<Node> allNodes = new List<Node>();
-    private Node playerNode;
-    private Node goalNode;
-
     public List<Node> AllNodes { get => allNodes; }
+
+    private Node playerNode;
     public Node PlayerNode { get => playerNode; }
+
+    private Node goalNode;
     public Node GoalNode { get => goalNode; }
+    
+    private Node corpseNode;
+    public Node CorpseNode { get => corpseNode; }
+    
+    private PlayerMover player;
+
+    private CorpseManager corpse;
+    public CorpseManager Corpse { get => corpse; }
 
     private void Awake()
     {
+        player = FindObjectOfType<PlayerMover>();
+        corpse = FindObjectOfType<CorpseManager>();
+
         GetAllNodes();
+        goalNode = FindGoalNode();
     }
 
     public void InitBoard()
     {
-        playerNode = allNodes[0];
+        UpdatePlayerNode();
 
         if(playerNode != null)
         {
@@ -60,5 +73,21 @@ public class Board : MonoBehaviour
     public Node FindGoalNode()
     {
         return allNodes.Find(n => n.isLevelGoal);
+    }
+
+    public void UpdatePlayerNode()
+    {
+        playerNode = player.CurrentNode;
+    }
+
+    public void UpdateCorpseNode()
+    {
+        corpseNode = Corpse.CurrentNode;
+    }
+
+    public void DestroyCorpseRef()
+    {
+        corpseNode = null;
+        corpse = null;
     }
 }

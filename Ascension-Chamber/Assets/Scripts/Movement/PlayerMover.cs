@@ -4,5 +4,35 @@ using UnityEngine;
 
 public class PlayerMover : Mover
 {
-    
+    protected override IEnumerator MoveCo(Vector3 destinationPos, float delayTime)
+    {
+        CorpseManager corpse = GetCorpseOnNode(destinationPos);
+
+        if (corpse != null)
+        {
+            Vector3 relPos = destinationPos - transform.position;
+
+            if (corpse.CanMoveDirection(destinationPos + relPos))
+            {
+                yield return StartCoroutine(corpse.Mover.MoveCorpse(destinationPos + relPos));
+                onFinishMovementEvent?.Invoke();
+            }
+            yield break;
+        }
+
+        yield return base.MoveCo(destinationPos, delayTime);
+    }
+
+    public CorpseManager GetCorpseOnNode(Vector3 position)
+    {
+        Node node = board.FindNodeAt(position);
+        if(node != null)
+        {
+            if (board.CorpseNode != null && node.Position == board.CorpseNode.Position)
+            {
+                return board.Corpse;
+            }
+        }
+        return null;
+    }
 }
