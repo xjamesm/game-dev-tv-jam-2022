@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : TurnManager
 {
     public bool IsDead;
+    public bool CanSeeGhost = false;
 
     EnemyMover mover;
     EnemySensor sensor;
@@ -33,22 +34,28 @@ public class EnemyManager : TurnManager
 
         sensor.UpdateSensor(mover.CurrentNode);
 
-        if (sensor.FoundCorpse)
+        if(sensor.FoundPlayer && CanSeeGhost)
         {
             Vector3 corpsePos = new Vector3(board.CorpseNode.Position.x, 0f, board.CorpseNode.Position.y);
             mover.Move(corpsePos, 0f);
-
-            while (mover.isMoving)
-            {
-                yield return null;
-            }
-
-            gameManager.EndLevel();
+        }
+        else if (sensor.FoundCorpse)
+        {
+            Vector3 corpsePos = new Vector3(board.CorpseNode.Position.x, 0f, board.CorpseNode.Position.y);
+            mover.Move(corpsePos, 0f);
         }
         else
         {
             mover.MoveOneTurn();
+            yield break;
         }
 
+
+        while (mover.isMoving)
+        {
+            yield return null;
+        }
+
+        gameManager.EndLevel();
     }
 }

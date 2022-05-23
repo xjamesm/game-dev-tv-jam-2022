@@ -53,7 +53,7 @@ public class Mover : MonoBehaviour
                 return true;
             }
         }
-        Debug.Log("Can't move to: " + targetNode + "Current node is: " + currentNode);
+        //Debug.Log("Can't move to: " + targetNode + "Current node is: " + currentNode);
         return false;
     }
 
