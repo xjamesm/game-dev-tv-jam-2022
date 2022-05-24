@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace UI
 {
-    public class MainMenu : Menu
+    public class MainMenu : Menu<MainMenu>
     {
         public void OnStartGame()
         {
@@ -14,12 +14,12 @@ namespace UI
 
         public void PressOptions()
         {
-
+            OptionsMenu.Open();
         }
 
         public void PressLevelSelect()
         {
-
+            LevelSelectMenu.Open();
         }
     } 
 }

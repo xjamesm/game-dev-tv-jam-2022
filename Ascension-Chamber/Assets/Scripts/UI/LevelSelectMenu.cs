@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class LevelSelectMenu : Menu
+    public class LevelSelectMenu : Menu<LevelSelectMenu>
     {
         
     } 

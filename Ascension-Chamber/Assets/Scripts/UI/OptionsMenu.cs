@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class OptionsMenu : Menu
+    public class OptionsMenu : Menu<OptionsMenu>
     {
         
     } 
