@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Ouroboros';
+    src:    url('Ouroboros_web.eot');
+    src:    url('Ouroboros_web.eot?#iefix') format('embedded-opentype'),
+            url('Ouroboros_web.woff') format('woff'),
+            url('Ouroboros_web.woff2') format('woff2'),
+            url('Ouroboros_web.ttf') format('truetype'),
+            url('Ouroboros_web.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
