@@ -1,0 +1,16 @@
+---
+unified font repository version: "0.2"
+unified font repository url: https://github.com/raphaelbastide/Unified-Font-Repository/
+typeface family:
+  name: Ouroboros
+  tags:
+  - Human made
+  - Serif
+  - Fantasy
+  repository url: https://gitlab.com/studiotriple/ouroboros
+  project url: http://arielgraphisme.com/
+  tools:
+  - Glyphs
+  similar fonts:
+  sample text: The quick brown fox jumps over the lazy dog
+...
