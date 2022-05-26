@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 4508792156412508825}
   - component: {fileID: 4508792156412508829}
   - component: {fileID: 692445670669722736}
+  - component: {fileID: 8958315505913703028}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -1470,6 +1471,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52f95d9f7af7d0428cccb472242c07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8958315505913703028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4508792156412508824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268dc83ae3186dc408305ee8120c1bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVol: {fileID: 4508792156878712770}
+  musicVol: {fileID: 3465829605254803832}
+  sfxVol: {fileID: 3646725428774102510}
 --- !u!1 &4508792156484898828
 GameObject:
   m_ObjectHideFlags: 0
