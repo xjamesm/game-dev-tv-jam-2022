@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 28c4a13c4dd21f34986a9177f86b2c64
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ouroboros
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d41ed0a0a8a759b4c9734a1b50aceed1, type: 3}
+  - {fileID: 12800000, guid: 22f5bfb39b9d27d43946b1f549e09bdb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
