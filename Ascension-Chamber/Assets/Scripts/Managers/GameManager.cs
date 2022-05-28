@@ -23,6 +23,8 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    public int LevelNumber = 0;
+    
     Turn currentTurn = Turn.Player;
     public Turn CurrentTurn { get => currentTurn; }
 
@@ -97,6 +99,21 @@ public class GameManager : MonoBehaviour
             currentState = GameState.GameOver;
             loseLevelEvent?.Invoke();
         }
+    }
+
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+
+    }
+
+    public void GotoMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void UpdateTurn()
