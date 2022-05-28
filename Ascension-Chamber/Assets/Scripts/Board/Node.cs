@@ -110,4 +110,11 @@ public class Node : MonoBehaviour
 
         return null;
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(0f, 0f, 1f, 0.5f);
+
+        Gizmos.DrawCube(transform.position, new Vector3(0.6f, 0.1f, 0.6f));
+    }
 }
