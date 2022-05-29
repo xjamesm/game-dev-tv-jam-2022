@@ -17,6 +17,7 @@ public class Mover : MonoBehaviour
     protected Node currentNode;
     public Node CurrentNode { get => currentNode; }
 
+    public UnityEvent onStartMovementEvent;
     public UnityEvent onFinishMovementEvent;
 
     virtual protected void Awake()
@@ -69,8 +70,10 @@ public class Mover : MonoBehaviour
 
         yield return new WaitForSeconds(delayTime);
 
+        onStartMovementEvent?.Invoke();
+
         float dist = Vector3.Distance(transform.position, destinationPos);
-        while (Vector3.Distance(transform.position, destinationPos) > Mathf.Epsilon)
+        while (Vector3.Distance(transform.position, destinationPos) > 0.001)
         {
             transform.position = Vector3.MoveTowards(transform.position, destinationPos, moveSpeed * Time.deltaTime);
             yield return null;
@@ -123,22 +126,12 @@ public class Mover : MonoBehaviour
             yield break;
 
         Quaternion newRot = Quaternion.LookRotation(relPos, Vector3.up);
+        Quaternion endRotation = Quaternion.Euler(transform.eulerAngles.x, newRot.eulerAngles.y, transform.eulerAngles.z);
 
-        float startY = transform.eulerAngles.y;
-        float endY = newRot.eulerAngles.y;
-
-        float time = Mathf.Abs(startY - endY) / rotateSpeed;
-        float t = 0.0f;
-
-        while (t < time)
+        while(transform.rotation != endRotation)
         {
-            t += Time.deltaTime;
-            float yRotation = Mathf.Lerp(startY, endY, t / time);
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
-
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, endRotation, rotateSpeed * Time.deltaTime);
             yield return null;
         }
-
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, endY, transform.eulerAngles.z);
     }
 }

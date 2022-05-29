@@ -82,7 +82,10 @@ public class Board : MonoBehaviour
 
     public void UpdateCorpseNode()
     {
-        corpseNode = Corpse.CurrentNode;
+        if (Corpse != null)
+            corpseNode = Corpse.CurrentNode;
+        else
+            corpseNode = null;
     }
 
     public void DestroyCorpseRef()

@@ -131,7 +131,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3081733964534194521}
-  - {fileID: 8051926477673110530}
   - {fileID: 4670840195769435921}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -168,6 +167,33 @@ MonoBehaviour:
   moveSpeed: 1.5
   delay: 0
   rotateSpeed: 360
+  onStartMovementEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1599346030318050667}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: startWalking
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1599346030318050667}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: stopWalking
+          m_BoolArgument: 0
+        m_CallState: 2
   onFinishMovementEvent:
     m_PersistentCalls:
       m_Calls:
@@ -181,6 +207,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1599346030318050667}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: stopWalking
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1599346030318050667}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: startWalking
           m_BoolArgument: 0
         m_CallState: 2
   dirToMove: {x: 0, y: 0, z: 1}
@@ -307,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7644487495203735690, guid: c8ff01ebec031e241ae58ca586f91309, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7644487495203735690, guid: c8ff01ebec031e241ae58ca586f91309, type: 3}
       propertyPath: m_LocalPosition.x
@@ -351,30 +401,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ff01ebec031e241ae58ca586f91309, type: 3}
+--- !u!95 &1599346030318050667 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4392839273107493616, guid: c8ff01ebec031e241ae58ca586f91309, type: 3}
+  m_PrefabInstance: {fileID: 3081733965585633179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4670840195769435921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7644487495203735690, guid: c8ff01ebec031e241ae58ca586f91309, type: 3}
   m_PrefabInstance: {fileID: 3081733965585633179}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3081733966321760024
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3081733965196476655}
-    m_Modifications:
-    - target: {fileID: -4216859302048453862, guid: b884a4d952dca6341a946232c5dc600a, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: b884a4d952dca6341a946232c5dc600a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b884a4d952dca6341a946232c5dc600a, type: 3}
---- !u!4 &8051926477673110530 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b884a4d952dca6341a946232c5dc600a, type: 3}
-  m_PrefabInstance: {fileID: 3081733966321760024}
   m_PrefabAsset: {fileID: 0}
