@@ -22,7 +22,6 @@ public class PlayerMover : Mover
                 yield return StartCoroutine(corpse.Mover.MoveCorpse(destinationPos + relPos));
                 onFinishMovementEvent?.Invoke();
 
-                
             }
             isMoving = false;
             yield break;
