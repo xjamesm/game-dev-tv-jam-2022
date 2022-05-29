@@ -128,7 +128,9 @@ public class Mover : MonoBehaviour
         Quaternion newRot = Quaternion.LookRotation(relPos, Vector3.up);
         Quaternion endRotation = Quaternion.Euler(transform.eulerAngles.x, newRot.eulerAngles.y, transform.eulerAngles.z);
 
-        while(transform.rotation != endRotation)
+        
+
+        while(Quaternion.Angle(transform.rotation, endRotation) >= 0.01f)
         {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, endRotation, rotateSpeed * Time.deltaTime);
             yield return null;

@@ -55,6 +55,18 @@ MonoBehaviour:
   - sceneName: Level_1
     audioClip: {fileID: 8300000, guid: b9746293e7406284d85af49cdb313cf9, type: 3}
     volume: 0.6
+  - sceneName: Level_2
+    audioClip: {fileID: 8300000, guid: b9746293e7406284d85af49cdb313cf9, type: 3}
+    volume: 0.6
+  - sceneName: Level_3
+    audioClip: {fileID: 8300000, guid: b9746293e7406284d85af49cdb313cf9, type: 3}
+    volume: 0.6
+  - sceneName: Level_4
+    audioClip: {fileID: 8300000, guid: b9746293e7406284d85af49cdb313cf9, type: 3}
+    volume: 0.6
+  - sceneName: Level_5
+    audioClip: {fileID: 8300000, guid: b9746293e7406284d85af49cdb313cf9, type: 3}
+    volume: 0.6
   - sceneName: SampleScene
     audioClip: {fileID: 8300000, guid: b9746293e7406284d85af49cdb313cf9, type: 3}
     volume: 0.6
