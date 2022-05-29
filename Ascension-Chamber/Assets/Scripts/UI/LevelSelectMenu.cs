@@ -19,7 +19,7 @@ namespace UI
             levelSeletParent = levelSelectObject.transform.parent;
 
             levelSelectObject.SetActive(false);
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
                 GameObject levelS = Instantiate(levelSelectObject, levelSeletParent);
                 levelS.GetComponent<LevelSelectButton>().UpdateLevelSelect(i + 1);

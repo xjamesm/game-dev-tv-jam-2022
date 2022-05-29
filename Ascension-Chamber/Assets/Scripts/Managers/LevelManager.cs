@@ -10,6 +10,11 @@ public class LevelManager : Singleton<LevelManager>
 
     public void WinLevel(int levelnum, int turns)
     {
+        UnlockLevel(levelnum + 1);
+
+        if (GetLevelTurnsBest(levelnum) < turns && GetLevelTurnsBest(levelnum) != -1)
+            return;
+
         PlayerPrefs.SetInt(LevelClearPrefix + levelnum, turns);
     }
 
@@ -19,6 +24,12 @@ public class LevelManager : Singleton<LevelManager>
             return PlayerPrefs.GetInt(LevelClearPrefix + levelnum) != 0;
 
         return false;
+    }
+
+    public void UnlockLevel(int levelnum)
+    {
+        if(GetLevelTurnsBest(levelnum) == -1)
+            PlayerPrefs.SetInt(LevelClearPrefix + levelnum, -1);
     }
 
     public int GetLevelTurnsBest(int levelnum)

@@ -6338,7 +6338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5380954971587990772, guid: 940bbfce4bae7534f9f15f89573393ca, type: 3}
       propertyPath: LevelNumber
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5380954971587990772, guid: 940bbfce4bae7534f9f15f89573393ca, type: 3}
       propertyPath: setupEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -111,10 +111,10 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        if (LevelNumber == 6)
+        if (LevelNumber == 5)
             return;
 
-        LevelManager.Instance.LoadLevel(LevelNumber++);
+        LevelManager.Instance.LoadLevel(LevelNumber + 1);
     }
 
     public void GotoMenu()

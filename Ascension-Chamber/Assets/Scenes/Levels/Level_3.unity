@@ -343,13 +343,13 @@ Transform:
   - {fileID: 1329738454}
   - {fileID: 1769734479}
   - {fileID: 110949613}
-  - {fileID: 289002231}
-  - {fileID: 993871918}
   - {fileID: 1192436202}
   - {fileID: 1352316335}
-  - {fileID: 2025956171}
+  - {fileID: 289002231}
+  - {fileID: 993871918}
   - {fileID: 680172310}
   - {fileID: 1385738437}
+  - {fileID: 2025956171}
   - {fileID: 841177623}
   - {fileID: 321414761}
   - {fileID: 1256591820}
@@ -10457,7 +10457,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5380954971587990772, guid: 940bbfce4bae7534f9f15f89573393ca, type: 3}
       propertyPath: LevelNumber
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5380954971587990772, guid: 940bbfce4bae7534f9f15f89573393ca, type: 3}
       propertyPath: setupEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
