@@ -14,6 +14,9 @@ public class PlayerMover : Mover
 
             if (corpse.CanMoveDirection(destinationPos + relPos))
             {
+                destination = destinationPos;
+                yield return StartCoroutine(FaceDestination());
+
                 yield return StartCoroutine(corpse.Mover.MoveCorpse(destinationPos + relPos));
                 onFinishMovementEvent?.Invoke();
             }
