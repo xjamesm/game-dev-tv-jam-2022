@@ -1,0 +1,15 @@
+Death is only the Beginning theme for the GameDev.TV game jam 2022
+Title - Ascension Chamber
+Story:
+	Having heard an old tale about immortality, player name thought “wouldn’t that be cool” and as life went on they thought about it more and more.  Years of research and work went into debunking the myth of immortality, but it was discovered that it was actually true!!  By placing three items that existed in the mortal and ethereal realms it was possible to become immortal.  
+Sitting in the recliner one evening whilst icing injury a thought occurred.  If the three items could be placed inconspicuously in the hospital before surgery was scheduled to happen, I could then die on the operating table…Yes!! The thoughts were coming rapid and quickly now.  Surgery was scheduled to take place in 10 days!!  Not a lot of time to work out a plan, but they knew that “Death was only the beginning”
+V1:
+	Having heard numerous tales of immortality, they thought “Wouldn’t that be cool; to live forever” Alas Mit never found a way to make it happen, until one day he was approached by Kirc, a dark and mysterious hooded figure promising the gift of immortality! An agreement was in the works, and all it would cost Mit was his soul.  The transaction was nearly complete, all that remained was to deliver the soul to the temple of Dragdyog in the upper floors of the hospital.  Mit knew the time to do this was during his planned hip replacement surgery.  Kirc gave him a potion to drink that would give him the ability to manipulate his dead corpse throughout the hospital.  
+	Mit drank the potion as instructed, on a Friday afternoon and spent the next 10 days prepping things for his eventual ascension to immortality.  Now that everything is prepped, and surgery has begun Mit needs your help to guide the way to the temple doors.  Can you help avoid the doctors and nurses who are desperately trying to bring Mit back to life!
+
+Game Objective:
+	The game picks up right after the player “dies” on the Operating Room Table.  Since the three items are close enough to the player they can exist in the ethereal plane and manipulate objects in the real world.  You must make it through each level and obtain the items before reaching the “Ascension Chamber” Avoiding the Doctors and Nurses desperately trying to bring you back to life.  
+Turn based strategy game, by moving the player to the space occupied by the corpse (represented by the stretcher) it will move to the next space if available.  Getting the corpse and the player to the goal on each level advances the game and brings you one step closer to immortal.
+
+
+

@@ -27,6 +27,11 @@ public class SoundManager : Singleton<SoundManager>
 
     private void Awake()
     {
+        if(instance != null)
+        {
+            Destroy(this);
+            return;
+        }
         DontDestroyOnLoad(this);
     }
 
