@@ -6,6 +6,8 @@ public class PlayerMover : Mover
 {
     protected override IEnumerator MoveCo(Vector3 destinationPos, float delayTime)
     {
+        isMoving = true;
+
         CorpseManager corpse = GetCorpseOnNode(destinationPos);
 
         if (corpse != null)
@@ -19,7 +21,10 @@ public class PlayerMover : Mover
 
                 yield return StartCoroutine(corpse.Mover.MoveCorpse(destinationPos + relPos));
                 onFinishMovementEvent?.Invoke();
+
+                
             }
+            isMoving = false;
             yield break;
         }
 

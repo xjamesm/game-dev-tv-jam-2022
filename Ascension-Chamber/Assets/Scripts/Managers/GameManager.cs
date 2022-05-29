@@ -120,7 +120,9 @@ public class GameManager : MonoBehaviour
     {
         if(currentTurn == Turn.Player)
         {
-            TurnCounter++;
+            if(player.IsTurnComplete)
+                TurnCounter++;
+
             if (player.IsTurnComplete && !AreEnemiesAllDead())
             {
                 PlayEnemyTurn();

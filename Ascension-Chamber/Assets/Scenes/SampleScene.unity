@@ -1821,6 +1821,9 @@ MonoBehaviour:
   moveSpeed: 1.5
   delay: 0
   rotateSpeed: 360
+  onStartMovementEvent:
+    m_PersistentCalls:
+      m_Calls: []
   onFinishMovementEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5759,6 +5762,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487743997}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1511663713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5210429445354960206, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+  m_PrefabInstance: {fileID: 5210429444743311290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1515791742
 GameObject:
   m_ObjectHideFlags: 0
@@ -8901,9 +8909,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
       propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1511663713}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 568021690}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DestroyCorpseRef
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210429445354960204, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
+      propertyPath: onGoalEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Board, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5210429445354960206, guid: 314696cfdfda2d841bf67a36a433f42d, type: 3}
       propertyPath: m_Name
       value: Corpse
