@@ -11,9 +11,17 @@ namespace UI
     {
         public UnityEvent OnHighLight;
 
+        private Button button;
+
+        private void Awake()
+        {
+            button = GetComponent<Button>();
+        }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
-            OnHighLight?.Invoke();
+            if(button.interactable)
+                OnHighLight?.Invoke();
         }
     } 
 }

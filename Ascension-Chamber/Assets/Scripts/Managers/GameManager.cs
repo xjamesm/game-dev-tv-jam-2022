@@ -90,6 +90,9 @@ public class GameManager : MonoBehaviour
         if (SavedCorpse)
         {
             Debug.Log("Game Win!");
+
+            LevelManager.Instance.WinLevel(LevelNumber, TurnCounter);
+
             currentState = GameState.GameWin;
             winLevelEvent?.Invoke();
         }
@@ -108,7 +111,10 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        if (LevelNumber == 6)
+            return;
 
+        LevelManager.Instance.LoadLevel(LevelNumber++);
     }
 
     public void GotoMenu()
