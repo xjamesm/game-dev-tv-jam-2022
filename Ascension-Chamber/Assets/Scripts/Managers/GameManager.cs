@@ -98,7 +98,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game Loose!");
             currentState = GameState.GameOver;
             loseLevelEvent?.Invoke();
         }

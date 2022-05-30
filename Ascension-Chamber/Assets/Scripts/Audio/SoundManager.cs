@@ -29,7 +29,7 @@ public class SoundManager : Singleton<SoundManager>
     {
         if(instance != null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
         DontDestroyOnLoad(this);
@@ -63,6 +63,8 @@ public class SoundManager : Singleton<SoundManager>
         {
             if (playlist.sceneName == playerListName)
             {
+                if (bgSource.clip == playlist.audioClip)
+                    return;
                 SetBGM(playlist, looping);
             }
         }

@@ -28,6 +28,7 @@ public class PlayerMover : Mover
         }
 
         yield return base.MoveCo(destinationPos, delayTime);
+        onFinishMovementEvent?.Invoke();
     }
 
     public CorpseManager GetCorpseOnNode(Vector3 position)
