@@ -17,12 +17,16 @@ public class PatrolMover : EnemyMover
         Vector3 newDest = startPos + transform.TransformVector(dirToMove);
         Vector3 nextDest = startPos + transform.TransformVector(dirToMove * 2);
 
-        this.Move(newDest, 0f);
+        //this.Move(newDest, 0f);
 
-        while (isMoving)
-        {
-            yield return null;
-        }
+        //while (isMoving)
+        //{
+        //    yield return null;
+        //}
+
+        yield return StartCoroutine(this.MoveCo(newDest, 0f));
+
+        isMoving = true;
 
         if (board != null)
         {
@@ -35,6 +39,8 @@ public class PatrolMover : EnemyMover
                 yield return FaceDestination();
             }
         }
+
+        isMoving = false;
 
         base.onFinishMovementEvent.Invoke();
     }

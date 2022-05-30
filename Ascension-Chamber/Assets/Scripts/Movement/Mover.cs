@@ -84,7 +84,7 @@ public class Mover : MonoBehaviour
 
         UpdateCurrentNode();
 
-        onFinishMovementEvent?.Invoke();
+        
     }
 
     public void MoveLeft()
