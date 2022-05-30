@@ -30,6 +30,8 @@ public class GameMenu : MonoBehaviour
         menuButtonFader.gameObject.SetActive(true);
         menuButtonFader.FadeSolid();
 
+        screenFader.gameObject.SetActive(true);
+
         startFader.gameObject.SetActive(true);
         screenFader.SetSolid();
         startFader.FadeSolid();
@@ -42,6 +44,8 @@ public class GameMenu : MonoBehaviour
     {
         menuButtonFader.gameObject.SetActive(true);
         menuButtonFader.FadeSolid();
+
+        screenFader.gameObject.SetActive(true);
 
         endFader.gameObject.SetActive(false);
         startFader.gameObject.SetActive(false);
@@ -56,6 +60,8 @@ public class GameMenu : MonoBehaviour
     {
         menuButtonFader.gameObject.SetActive(true);
         menuButtonFader.FadeSolid();
+
+        screenFader.gameObject.SetActive(true);
 
         loseFader.gameObject.SetActive(false);
         startFader.gameObject.SetActive(false);
@@ -93,6 +99,12 @@ public class GameMenu : MonoBehaviour
         StartCoroutine(WaitForCurrentFader());
     }
 
+    public void OnRetryClick()
+    {
+        screenFader.FadeSolid();
+        OnRetryLevelEvent?.Invoke();
+    }
+
     public void OnMenuClick()
     {
         OnGotoMenuEvent?.Invoke();
@@ -114,6 +126,8 @@ public class GameMenu : MonoBehaviour
 
         screenFader.FadeClear();
         yield return new WaitForSeconds(screenFader.FadeClearDuration);
+
+        screenFader.gameObject.SetActive(false);
         endEvent?.Invoke();
         currentFader.gameObject.SetActive(false);
         menuButtonFader.gameObject.SetActive(false);

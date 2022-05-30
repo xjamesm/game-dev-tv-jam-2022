@@ -59,6 +59,9 @@ public class SoundManager : Singleton<SoundManager>
 
     public void OverrideBGM(string playerListName, bool looping = true)
     {
+        if (instance != this && instance != null)
+            return;
+
         foreach(BGMusicPlaylist playlist in musicPlaylist)
         {
             if (playlist.sceneName == playerListName)
