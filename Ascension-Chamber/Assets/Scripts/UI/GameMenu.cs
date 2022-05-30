@@ -9,7 +9,8 @@ public class GameMenu : MonoBehaviour
     [SerializeField] private ScreenFader startFader;
     [SerializeField] private ScreenFader loseFader;
     [SerializeField] private ScreenFader endFader;
-    
+    [SerializeField] private ScreenFader endGameFader;
+
     [SerializeField] private ScreenFader menuButtonFader;
 
     public UnityEvent OnStartLevelEvent;
@@ -38,6 +39,7 @@ public class GameMenu : MonoBehaviour
 
         loseFader.gameObject.SetActive(false);
         endFader.gameObject.SetActive(false);
+        endGameFader.gameObject.SetActive(false);
     }
 
     public void ShowLostScreen()
@@ -49,6 +51,7 @@ public class GameMenu : MonoBehaviour
 
         endFader.gameObject.SetActive(false);
         startFader.gameObject.SetActive(false);
+        endGameFader.gameObject.SetActive(false);
 
         loseFader.gameObject.SetActive(true);
 
@@ -65,10 +68,27 @@ public class GameMenu : MonoBehaviour
 
         loseFader.gameObject.SetActive(false);
         startFader.gameObject.SetActive(false);
+        endGameFader.gameObject.SetActive(false);
 
         endFader.gameObject.SetActive(true);
         screenFader.FadeSolid();
         endFader.FadeSolid();
+    }
+
+    public void ShowEndGameScreen()
+    {
+        menuButtonFader.gameObject.SetActive(true);
+        menuButtonFader.FadeSolid();
+
+        screenFader.gameObject.SetActive(true);
+
+        loseFader.gameObject.SetActive(false);
+        startFader.gameObject.SetActive(false);
+        endGameFader.gameObject.SetActive(false);
+
+        endGameFader.gameObject.SetActive(true);
+        screenFader.FadeSolid();
+        endGameFader.FadeSolid();
     }
 
     public void OnStartClick()
